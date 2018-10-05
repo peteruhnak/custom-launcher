@@ -197,6 +197,34 @@ NGZlNjYwZTkyMWNiYzIuaWNvLnBuZ6bBK2QAAAAASUVORK5CYII='
 ]
 
 { #category : #'accessing - icons' }
+LauncherIcons class >> nssIcon [
+	"Private - Generated method"
+	^ self icons
+		at: #nssIcon
+		ifAbsentPut: [ Form
+				fromBinaryStream: (Base64MimeConverter mimeDecodeToBytes: self nssIconContents readStream) ]
+]
+
+{ #category : #'private - contents' }
+LauncherIcons class >> nssIconContents [
+	"Private - Method generated with the content of the file File @ D:\resources\pharo-launcher-icons\nss.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAA
+CXBIWXMAAC4rAAAuKwFcLzcTAAAAB3RJTUUH4gMTERAxlKxJpAAAAB1pVFh0Q29tbWVudAAA
+AAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAACSklEQVQ4y62TTUhUYRSGn+9+9zp3TEy0GjSV
+QigUJ6UfEKUfgsColVFkEUhCQqRegiDBVSujFgMuWqa1qwQXlSG6qMiF9iNc0FFC+4EocXTG
+5HpzZu7XYq5RYqs6u3M45+HwnvfAP4bYqBgxw8JybRUxw1VAN/AFOG+5dnp9r77BsAnsi5jh
+o8AxoAYwAAe4+NcNImY4AOwEjgC3gBzgtQBHKJXnCTENDAOPLNee/wWImGENOAicAQ4DU0AI
+qNOVSiUMo+1T9qbFcCLenhKiBrgPXLNc+9saIAi8Acp96DLwxPC8+bGCLfG+0tKqlBChtqno
+52LHaUgLEQcuAQOWay/Lej3kATHglA/IEtAfTKfvdlVWNic17bgSYvu7/Hxj1/el3rzV5IwS
+ogUoq9dDLzTLtT2gD2gF5oBWBWWOlKPnZmdfahk4K1LmLGSZbwEJ7ABagOt/nPFmdnV5wEv3
+AgcApFKrg4VFnc+Kihrao5P9JY7TpSAKvAdOApcFgFHbtC0txOnClZXdVycntupKnVU+VCr1
+cM+PxY5xMz+qMmdXwCvgBvBcGrVNdUC3BlcShlExnbt5bH8sFpdQAAwqIRJf9WAH0OsLHQT6
+gTuWa6ekLKl+ABwClAaBWCBQNmeaT/cuLAwoIYqBRjKwXOAxMAp0Wq7tAmhAJxBfM5Xheenx
+UGgo4Hn3gKrfJKoEVi3XbrVce2mtqCVHeoaBC37+AWhEyqGW5MQc0Oz7AjLi3d7QykZtkw5U
+AMnkSM/kut844Q/WW679kf8dPwHHpdAdMH+TrwAAAABJRU5ErkJggg=='
+]
+
+{ #category : #'accessing - icons' }
 LauncherIcons class >> openponkIcon [
 	"Private - Generated method"
 	^ self icons
@@ -255,7 +283,7 @@ FvML0xO4fuYL/cv3p4zvl9bP/gK9WIRl7kmWawAAAABJRU5ErkJggg=='
 { #category : #'accessing - reset' }
 LauncherIcons class >> reloadIcons [
 	<script>
-	IconFactory syncDirectory: 'D:\resources\pharo-launcher-icons' intoClass: self
+	IconFactory loadDirectory: 'D:\resources\pharo-launcher-icons' intoClass: self
 ]
 
 { #category : #'accessing - reset' }
@@ -420,4 +448,22 @@ I0GCB3AlxkjcBLyBF8kqe883Rwikd1nEA2QRPIBLJ4vpEYVSxCySD01T/X99qru6KtcgtzDG
 DFM8lP27CkTzIhyhxismuAusmyS36yKaYXhEbvCGp0vFJSzxfNVVAtS3Jv4fg4QPNAH3hc8z
 XI+ciknUosEF7lBAwgKrgNxgf4brsfvtG9R/34Ua77ovu73FoDqJcnuvm7KpbpgGeNHNyTjI
 b6rgMEZuh8WoX4/Y/gA1cR2kWop2yQAAAABJRU5ErkJggg=='
+]
+
+{ #category : #'accessing - icons' }
+LauncherIcons class >> xmlIcon [
+	"Private - Generated method"
+	^ self icons
+		at: #xmlIcon
+		ifAbsentPut: [ Form
+				fromBinaryStream: (Base64MimeConverter mimeDecodeToBytes: self xmlIconContents readStream) ]
+]
+
+{ #category : #'private - contents' }
+LauncherIcons class >> xmlIconContents [
+	"Private - Method generated with the content of the file File @ D:\resources\pharo-launcher-icons\xml.png"
+	^ 'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAbElEQVR42mNgoBWYtXxDA5Q+
+g46J0gxTSLIBMM1kGYCsmWwXYDGUJBecIQbTzgCywadUpU3kYgwDzkYq7ck2V7gH44PYIDGi
+DJjhpng2WF/hRZ+z4gWYGIgNEgPJETQAl0KYwbR3AcVhQA4GAA8QbrIyjFVcAAAAAElFTkSu
+QmCC'
 ]

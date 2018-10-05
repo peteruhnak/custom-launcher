@@ -4,7 +4,8 @@ Extension { #name : #PharoLauncher }
 PharoLauncher >> iconFor: aString [
 	| icons map |
 	icons := OrderedCollection new.
-	(aString includesSubstring: ' NSP ')
+	(aString includesSubstring: ' NSP ') | (aString includesSubstring: 'NSX ')
+		| (aString includesSubstring: 'NSM ')
 		ifTrue: [ icons add: LauncherIcons nssIcon ].
 	(aString beginsWith: 'OP -')
 		ifTrue: [ icons add: LauncherIcons openponkIcon ].
@@ -12,6 +13,8 @@ PharoLauncher >> iconFor: aString [
 	'aws'.
 	's3'.
 	'trello'.
+	'xml'.
+	('xsd' -> 'xml').
 	(' - moose.*' -> 'moose').
 	(' - P7$' -> 'pharo7').
 	('bloc' -> 'bloc2').
@@ -116,6 +119,8 @@ PharoLauncher >> textFor: aString [
 		ifNotEmpty: [ :r | text makeColor: Color darkGray from: r first first to: r first last ].
 	(' - [pP]7$' asRegex matchingRangesIn: aString)
 		ifNotEmpty: [ :r | text makeColor: Color orange from: r first first to: r first last ].
+	('NSX ' asRegex matchingRangesIn: aString)
+		ifNotEmpty: [ :r | text makeColor: Color red from: r first first to: r first last ].
 	('[bB]loc' asRegex matchingRangesIn: aString)
 		ifNotEmpty: [ :r | text makeColor: Color yellow from: r first first to: r first last ].
 	"	text makeAllColor: Color gray."
