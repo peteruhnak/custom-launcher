@@ -13,8 +13,6 @@ PharoLauncher >> iconFor: aString [
 	'aws'.
 	's3'.
 	'trello'.
-	'xml'.
-	('xsd' -> 'xml').
 	(' - moose.*' -> 'moose').
 	(' - P7$' -> 'pharo7').
 	('bloc' -> 'bloc2').
